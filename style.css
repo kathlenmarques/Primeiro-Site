@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+
+}
+body{
+    background-color: aliceblue;
+    min-height: 100vh;
+}
+/*tudo dentro do container*/
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+    
+}
+/*tudo dentro da nav (menu)*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+   
+}
+/*icon 3 traços acesso ao menu*/
+nav .menu-icon{
+    cursor: pointer;
+    display: none;
+}
+/*logo superior esquerda create.co*/
+nav .logo a{
+    font-size: 30px;
+    font-weight: bold;
+    color: #5654b3;
+    text-decoration: none; /*tira grifado de baixo das palavras/links*/
+}
+nav ul{
+    display: flex; /*deixa menu de lado (horizontal)*/
+    list-style: none; /*deixa lista sem bolinhas ao lado dos itens*/
+    align-items: center;
+    
+}
+nav ul li{
+    padding: 0 15px;
+     /*dá espaço às palavras do menu*/
+}
+nav ul li a{
+    text-decoration: none; /*tira grifado de baixo das palavras/links*/
+    font-size: 17px;
+    text-transform: uppercase; /*deixa em caps lock*/
+    color: #5654b3; /*cor*/
+    
+}
+nav ul button{
+    border: none; /*tira as bordas*/
+    background-color: #5654b3;
+    color: aliceblue; /*cor do texto*/
+    padding: 10px /*<< cima/baixo*/   25px /*<< lados*/;
+    border-radius: 5px; /*aredonda pontas*/
+    font-size: 16px;/*tamanho fonte*/
+    letter-spacing: 1px;/*espaçamento de cada letra da palavra (entre letras)*/
+    cursor: pointer; /*Cursor muda para mãozinha quando em cima do item*/
+    margin-left: 30px;
+
+
+} 
+
+main{
+    margin-top: 20px;
+    display: flex; /*deixa itens na horizontal*/
+    align-items: center;
+    justify-content: space-between;
+}
+.text-box{
+    width: 40%;/*largura*/
+}
+
+.text-box h1{
+    font-size: 3em;
+    text-transform: uppercase;
+    
+}
+.text-box b{
+    color: #f1676d;
+}
+.text-box p{
+    color: #372c62;
+    font-weight: 400;/*grossura*/
+    margin-top: 20px;/*espaço acima margem acima*/
+
+}
+.text-box .input-box{
+    margin: 20px 0;
+    display: flex;
+}
+
+.text-box .input-box input{
+ width: 60%;
+    display: block;
+    height: 50px; /*altura da caixa input do email*/
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #8997b9;
+    font-size: 16px;
+}
+.text-box .input-box input::placeholder{
+    color: #8997b9;
+}
+.text-box .input-box button{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px /*<< cima/baixo*/   20px /*<< lados*/;
+    background-color: #5654b3;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+.text-box .redes-sociais {
+    margin-top: 30px;
+}
+.text-box .redes-sociais i{
+    font-size: 25px;
+    margin: 0 5px;
+    color:  rgb(255, 255, 255);
+    background-color: #372c62;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.text-box .redes-sociais a{
+  text-decoration: none;
+}
+.img-box{
+width: 60%;
+}
+.img-box img{
+    width: 100%; /*largura responsiva*/
+}
+@media (max-width:970px){
+    nav .menu-icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.3s ease-in;
+        background-color: #5654b3;
+    }
+    nav ul .active{
+        transform: translateX(0)
+
+    }
+    nav ul li{
+        padding: 10px;
+    }
+
+    nav ul li a{
+        font-size: 18px;
+        color: aliceblue;
+    }
+    nav ul button{
+        background-color: #f1676d;
+        font-size: 18px;
+        margin: 10px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .text-box,.img-box{
+        width: 100%;
+        text-align: center;
+
+    }
+    .text-box{
+        margin-bottom: 40px;
+    }
+    .text-box .input-box{
+        justify-content: center;
+    }
+}
+    
